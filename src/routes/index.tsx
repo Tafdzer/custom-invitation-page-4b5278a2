@@ -3,6 +3,8 @@ import { useState } from "react";
 import coupleImg from "@/assets/couple-hero.jpg";
 import signingImg from "@/assets/signing.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
+import chandelierImg from "@/assets/chandelier.png";
+import candleImg from "@/assets/candle.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

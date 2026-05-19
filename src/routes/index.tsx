@@ -58,6 +58,18 @@ function Invitation() {
           </h1>
         </div>
         <div className="relative">
+          <img
+            src={chandelierImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -top-8 -left-10 w-40 md:w-52 z-10 select-none"
+          />
+          <img
+            src={candleImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -bottom-6 -right-6 w-16 md:w-20 z-10 select-none"
+          />
           <div className="absolute inset-0 border border-burgundy/30 translate-x-2 translate-y-2"></div>
           <img
             src={coupleImg}

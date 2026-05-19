@@ -115,8 +115,9 @@
   --burgundy-deep: oklch(0.28 0.10 18);
   --cream: oklch(0.97 0.012 85);
 
-  --font-script: 'Pinyon Script', cursive;
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-script: 'Sloop Script Pro', 'Pinyon Script', cursive;
+  --font-serif: 'Literaturnaya', 'Cormorant Garamond', serif;
+  --font-display: 'Monterchi Serif', 'Literaturnaya', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 

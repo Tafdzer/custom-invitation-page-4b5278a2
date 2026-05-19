@@ -87,6 +87,7 @@
   --font-script: var(--font-script);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
 :root {

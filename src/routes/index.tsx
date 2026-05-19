@@ -81,7 +81,7 @@ function Invitation() {
           />
         </div>
         <div className="text-center mt-10">
-          <p className="serif text-3xl md:text-4xl tracking-[0.15em] text-foreground">
+          <p className="display text-3xl md:text-4xl tracking-[0.15em] text-foreground font-light">
             ДМИТРИЙ <span className="script text-burgundy text-5xl align-middle">&amp;</span> ДАРЬЯ
           </p>
           <p className="serif italic text-2xl mt-4 text-foreground/80">14 / 08 / 2026</p>

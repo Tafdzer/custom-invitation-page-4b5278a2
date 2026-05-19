@@ -137,6 +137,7 @@
 .script { font-family: var(--font-script); font-weight: 400; }
 .serif { font-family: var(--font-serif); }
 .sans { font-family: var(--font-sans); letter-spacing: 0.05em; }
+.display { font-family: var(--font-display); }
 
 .ornament-line {
   display: flex; align-items: center; justify-content: center; gap: 1rem;

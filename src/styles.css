@@ -2,7 +2,58 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Literaturnaya';
+  src: url('/fonts/Literaturnaya-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Literaturnaya';
+  src: url('/fonts/Literaturnaya-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Literaturnaya';
+  src: url('/fonts/Literaturnaya-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Literaturnaya';
+  src: url('/fonts/Literaturnaya-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Monterchi Serif';
+  src: url('/fonts/Monterchi-Thin.ttf') format('truetype');
+  font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Monterchi Serif';
+  src: url('/fonts/Monterchi-Book.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Monterchi Serif';
+  src: url('/fonts/Monterchi-Extrabold.ttf') format('truetype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sloop Script Pro';
+  src: url('/fonts/SloopScriptPro.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sloop Script Pro';
+  src: url('/fonts/SloopScriptPro-Medium.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sloop Script Pro';
+  src: url('/fonts/SloopScriptPro-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -36,6 +87,7 @@
   --font-script: var(--font-script);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
 :root {
@@ -64,8 +116,9 @@
   --burgundy-deep: oklch(0.28 0.10 18);
   --cream: oklch(0.97 0.012 85);
 
-  --font-script: 'Pinyon Script', cursive;
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-script: 'Sloop Script Pro', 'Pinyon Script', cursive;
+  --font-serif: 'Literaturnaya', 'Cormorant Garamond', serif;
+  --font-display: 'Monterchi Serif', 'Literaturnaya', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
@@ -84,6 +137,7 @@
 .script { font-family: var(--font-script); font-weight: 400; }
 .serif { font-family: var(--font-serif); }
 .sans { font-family: var(--font-sans); letter-spacing: 0.05em; }
+.display { font-family: var(--font-display); }
 
 .ornament-line {
   display: flex; align-items: center; justify-content: center; gap: 1rem;

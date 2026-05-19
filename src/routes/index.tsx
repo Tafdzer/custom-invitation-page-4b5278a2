@@ -5,6 +5,8 @@ import signingImg from "@/assets/signing.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
 import chandelierImg from "@/assets/chandelier.png";
 import candleImg from "@/assets/candle.png";
+import cupidImg from "@/assets/cupid.png";
+import champagneImg from "@/assets/champagne.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,7 +89,8 @@ function Invitation() {
       </Section>
 
       {/* INVITATION + CALENDAR */}
-      <Section>
+      <Section className="relative">
+        <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-4 -left-4 w-40 md:w-52 z-10 select-none opacity-90" />
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           <span className="script text-burgundy text-5xl float-left leading-[0.8] mr-2 mt-1">Д</span>
           орогие родные и друзья!
@@ -175,7 +178,8 @@ function Invitation() {
       </Section>
 
       {/* WISHES */}
-      <Section className="!pt-0">
+      <Section className="!pt-0 relative">
+        <img src={champagneImg} alt="" aria-hidden className="pointer-events-none absolute -top-6 -right-2 w-20 md:w-24 z-10 select-none opacity-90" />
         <SectionTitle>Пожелания</SectionTitle>
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           Мы не будем оригинальными, но будем практичными. Лучший для нас подарок —

@@ -89,7 +89,8 @@ function Invitation() {
       </Section>
 
       {/* INVITATION + CALENDAR */}
-      <Section>
+      <Section className="relative">
+        <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-4 -left-4 w-40 md:w-52 z-10 select-none opacity-90" />
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           <span className="script text-burgundy text-5xl float-left leading-[0.8] mr-2 mt-1">Д</span>
           орогие родные и друзья!

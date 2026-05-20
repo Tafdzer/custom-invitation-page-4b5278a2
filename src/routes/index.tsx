@@ -51,7 +51,7 @@ function Invitation() {
   const blanks = 5;
 
   return (
-    <main className="min-h-screen w-full bg-cream text-foreground">
+    <main className="min-h-screen w-full text-foreground">
       {/* HERO */}
       <Section className="!py-12">
         <div className="text-center mb-6">

@@ -8,6 +8,11 @@ import candleImg from "@/assets/candle.png";
 import cupidImg from "@/assets/cupid.png";
 import champagneImg from "@/assets/champagne.png";
 import heart14Img from "@/assets/heart-14.png";
+import fabric1 from "@/assets/fabric-1.jpg";
+import fabric2 from "@/assets/fabric-2.jpg";
+import fabric3 from "@/assets/fabric-3.jpg";
+import fabric4 from "@/assets/fabric-4.jpg";
+import fabric5 from "@/assets/fabric-5.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

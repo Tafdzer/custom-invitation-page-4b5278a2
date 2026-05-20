@@ -116,8 +116,8 @@ function Invitation() {
               <div key={d} className="relative h-9 flex items-center justify-center">
                 {d === 14 ? (
                   <>
-                    <Heart className="absolute inset-0 m-auto h-9 w-9 text-burgundy" />
-                    <span className="relative text-cream font-medium">{d}</span>
+                    <img src={heart14Img} alt="" aria-hidden className="absolute inset-0 m-auto h-10 w-10 object-contain select-none pointer-events-none" />
+                    <span className="relative text-burgundy font-medium">{d}</span>
                   </>
                 ) : (
                   <span className="text-foreground/80">{d}</span>

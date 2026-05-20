@@ -78,7 +78,6 @@ function Invitation() {
             aria-hidden
             className="pointer-events-none absolute -bottom-6 -right-6 w-16 md:w-20 z-10 select-none"
           />
-          <div className="absolute inset-0 border border-burgundy/30 translate-x-2 translate-y-2"></div>
           <img
             src={coupleImg}
             alt="Дмитрий и Дарья"
@@ -145,7 +144,6 @@ function Invitation() {
           </div>
 
           <div className="relative mb-12">
-            <div className="absolute inset-0 border border-cream/40 translate-x-2 translate-y-2"></div>
             <img src={signingImg} alt="Регистрация брака" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
           </div>
 
@@ -155,7 +153,6 @@ function Invitation() {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 border border-cream/40 translate-x-2 translate-y-2"></div>
             <img src={restaurantImg} alt="Ресторан" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
           </div>
         </div>

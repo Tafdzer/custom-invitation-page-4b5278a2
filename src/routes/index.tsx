@@ -8,6 +8,11 @@ import candleImg from "@/assets/candle.png";
 import cupidImg from "@/assets/cupid.png";
 import champagneImg from "@/assets/champagne.png";
 import heart14Img from "@/assets/heart-14.png";
+import fabric1 from "@/assets/fabric-1.jpg";
+import fabric2 from "@/assets/fabric-2.jpg";
+import fabric3 from "@/assets/fabric-3.jpg";
+import fabric4 from "@/assets/fabric-4.jpg";
+import fabric5 from "@/assets/fabric-5.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -165,15 +170,15 @@ function Invitation() {
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-8">
           Но мы будем рады, если в своих нарядах вы поддержите цветовую гамму нашей свадьбы:
         </p>
-        <div className="flex justify-center gap-3 mb-4">
-          {[
-            "linear-gradient(135deg,#e9dcc9,#cdb89a)",
-            "linear-gradient(135deg,#7a5230,#4a2f1a)",
-            "linear-gradient(135deg,#2a2622,#0f0d0c)",
-            "linear-gradient(135deg,#8a1d2e,#4a0f1a)",
-            "linear-gradient(135deg,#5a1722,#2a0810)",
-          ].map((bg,i) => (
-            <div key={i} className="w-14 h-14 rounded-full ring-1 ring-burgundy/20 shadow-md" style={{background: bg}}/>
+        <div className="flex justify-center items-center mb-4">
+          {[fabric1, fabric2, fabric3, fabric4, fabric5].map((src, i) => (
+            <div
+              key={i}
+              className="w-16 h-16 rounded-full ring-2 ring-cream shadow-lg overflow-hidden -ml-3 first:ml-0"
+              style={{ zIndex: i + 1 }}
+            >
+              <img src={src} alt="" aria-hidden className="w-full h-full object-cover" />
+            </div>
           ))}
         </div>
       </Section>

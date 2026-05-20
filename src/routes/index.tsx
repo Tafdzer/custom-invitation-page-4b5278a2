@@ -7,6 +7,7 @@ import chandelierImg from "@/assets/chandelier.png";
 import candleImg from "@/assets/candle.png";
 import cupidImg from "@/assets/cupid.png";
 import champagneImg from "@/assets/champagne.png";
+import heart14Img from "@/assets/heart-14.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

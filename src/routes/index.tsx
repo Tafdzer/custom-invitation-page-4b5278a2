@@ -55,8 +55,8 @@ function Invitation() {
       {/* HERO */}
       <Section className="!py-12">
         <div className="text-center mb-6">
-          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight">
-            We are getting<br/>married!
+          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-left whitespace-pre-wrap">
+            {"\u00A0 We are getting\n\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 married!"}
           </h1>
         </div>
         <div className="relative">

@@ -214,15 +214,15 @@ function Invitation() {
           ) : (
             <form
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-              className="serif text-foreground/90 space-y-7"
+              className="serif text-burgundy space-y-7"
             >
-              <div>
-                <label className="block sans text-xs text-burgundy mb-2">Имя Фамилия</label>
+              <div className="flex items-center gap-3">
+                <label className="sans text-xs text-burgundy whitespace-nowrap">Имя Фамилия</label>
                 <input
                   required
                   value={form.name}
                   onChange={(e) => setForm({...form, name: e.target.value})}
-                  className="w-full bg-transparent border-b border-burgundy/40 py-2 serif text-lg focus:outline-none focus:border-burgundy transition-colors"
+                  className="flex-1 bg-transparent border-b border-burgundy/40 py-2 serif text-lg text-burgundy focus:outline-none focus:border-burgundy transition-colors"
                 />
               </div>
 

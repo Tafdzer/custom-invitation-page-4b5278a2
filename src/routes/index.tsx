@@ -306,7 +306,7 @@ function Question({
                 onChange={() => onChange(opt)}
                 className="sr-only"
               />
-              <span className="serif text-base">{opt}</span>
+              <span className="serif text-base text-burgundy">{opt}</span>
             </label>
           );
         })}

@@ -291,7 +291,7 @@ function Question({
 }) {
   return (
     <fieldset>
-      <legend className="serif text-base text-foreground/90 mb-3">{label}</legend>
+      <legend className="serif text-base text-burgundy mb-3">{label}</legend>
       <div className="space-y-2">
         {options.map(opt => {
           const checked = value === opt;

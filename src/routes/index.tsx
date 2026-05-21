@@ -269,8 +269,9 @@ function Invitation() {
           )}
 
           <div className="text-center mt-12">
-            <p className="script text-burgundy text-5xl inline-flex items-center gap-3">
-              Ждём Вас <Heart className="h-6 w-6"/>
+            <p className="script text-burgundy text-5xl inline-flex items-center justify-center gap-2 leading-none">
+              <span>Ждём Вас</span>
+              <img src={heart14Img} alt="" aria-hidden className="h-10 w-10 object-contain -mt-1 select-none" />
             </p>
           </div>
         </div>

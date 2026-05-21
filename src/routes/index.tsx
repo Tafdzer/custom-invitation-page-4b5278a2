@@ -166,7 +166,7 @@ function Invitation() {
       {/* DRESS CODE */}
       <Section>
         <SectionTitle>Дресс-код</SectionTitle>
-        <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-3">
+        <p className="text-center serif text-lg leading-relaxed text-foreground font-bold mb-3">
           Для нас главное — ваше присутствие!
         </p>
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-8">
@@ -176,7 +176,7 @@ function Invitation() {
           {[fabric1, fabric2, fabric3, fabric4, fabric5].map((src, i) => (
             <div
               key={i}
-              className="w-16 h-16 rounded-full ring-2 ring-cream shadow-lg overflow-hidden -ml-3 first:ml-0"
+              className="w-16 h-16 rounded-full overflow-hidden -ml-3 first:ml-0"
               style={{ zIndex: i + 1 }}
             >
               <img src={src} alt="" aria-hidden className="w-full h-full object-cover" />

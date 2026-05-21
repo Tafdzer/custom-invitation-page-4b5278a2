@@ -113,6 +113,7 @@ function Invitation() {
         <h3 className="script text-burgundy text-6xl text-center mb-6">Август</h3>
 
         <div className="relative">
+          <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-16 -right-6 w-28 md:w-32 z-10 select-none opacity-90" />
           <div className="grid grid-cols-7 gap-y-3 text-center sans text-xs text-burgundy mb-2">
             {["ПН","ВТ","СР","ЧТ","ПТ","СБ","ВС"].map(d => <div key={d}>{d}</div>)}
           </div>

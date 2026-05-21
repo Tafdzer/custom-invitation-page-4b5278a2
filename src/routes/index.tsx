@@ -136,27 +136,29 @@ function Invitation() {
       </Section>
 
       {/* LOCATION — dark burgundy panel */}
-      <section className="w-full bg-burgundy text-cream py-16">
-        <div className="max-w-md mx-auto px-8">
-          <h2 className="script text-cream text-6xl text-center mb-10 leading-none">Локация</h2>
+      <section className="w-full py-16 px-6">
+        <div className="bg-burgundy text-cream py-16 rounded-sm">
+          <div className="max-w-md mx-auto px-8">
+            <h2 className="script text-cream text-6xl text-center mb-10 leading-none">Локация</h2>
 
-          <div className="text-center mb-8">
-            <p className="serif italic text-3xl mb-1">11:40</p>
-            <p className="serif text-lg">ЗАГС города Новороссийска</p>
-            <p className="serif font-semibold text-lg">проспект Дзержинского, 197</p>
-          </div>
+            <div className="text-center mb-8">
+              <p className="serif italic text-3xl mb-1">11:40</p>
+              <p className="serif text-lg">ЗАГС города Новороссийска</p>
+              <p className="serif text-lg">проспект Дзержинского, 197</p>
+            </div>
 
-          <div className="relative mb-12">
-            <img src={signingImg} alt="Регистрация брака" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
-          </div>
+            <div className="relative mb-12">
+              <img src={signingImg} alt="Регистрация брака" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            </div>
 
-          <div className="text-center mb-8">
-            <p className="serif italic text-3xl mb-1">16:00</p>
-            <p className="serif font-semibold text-lg">Ресторан Chateau Pinot</p>
-          </div>
+            <div className="text-center mb-8">
+              <p className="serif italic text-3xl mb-1">16:00</p>
+              <p className="serif text-lg">Ресторан Chateau Pinot</p>
+            </div>
 
-          <div className="relative">
-            <img src={restaurantImg} alt="Ресторан" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            <div className="relative">
+              <img src={restaurantImg} alt="Ресторан" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            </div>
           </div>
         </div>
       </section>

@@ -60,9 +60,12 @@ function Invitation() {
     <main className="min-h-screen w-full text-foreground">
       {/* HERO */}
       <Section className="!py-12">
-        <div className="text-center mb-6">
-          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-left whitespace-pre-wrap">
-            {"\u00A0 We are getting\n\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 married!"}
+        <div className="mb-6">
+          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-left pl-3">
+            We are getting
+          </h1>
+          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-right pr-3 mt-2">
+            married!
           </h1>
         </div>
         <div className="relative">
@@ -89,13 +92,12 @@ function Invitation() {
           <p className="display text-3xl md:text-4xl tracking-[0.15em] text-foreground font-light">
             ДМИТРИЙ <span className="script text-burgundy text-5xl align-middle">&amp;</span> ДАРЬЯ
           </p>
-          <p className="script text-burgundy text-4xl mt-4">14 / 08 / 2026</p>
+          <p className="script text-foreground text-5xl mt-4">14 / 08 / 2026</p>
         </div>
       </Section>
 
       {/* INVITATION + CALENDAR */}
       <Section className="relative">
-        <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-4 -left-4 w-40 md:w-52 z-10 select-none opacity-90" />
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           <span className="script text-burgundy text-5xl float-left leading-[0.8] mr-2 mt-1">Д</span>
           орогие родные и друзья!
@@ -111,6 +113,7 @@ function Invitation() {
         <h3 className="script text-burgundy text-6xl text-center mb-6">Август</h3>
 
         <div className="relative">
+          <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-16 -right-6 w-28 md:w-32 z-10 select-none opacity-90" />
           <div className="grid grid-cols-7 gap-y-3 text-center sans text-xs text-burgundy mb-2">
             {["ПН","ВТ","СР","ЧТ","ПТ","СБ","ВС"].map(d => <div key={d}>{d}</div>)}
           </div>
@@ -133,27 +136,29 @@ function Invitation() {
       </Section>
 
       {/* LOCATION — dark burgundy panel */}
-      <section className="w-full bg-burgundy text-cream py-16">
-        <div className="max-w-md mx-auto px-8">
-          <h2 className="script text-cream text-6xl text-center mb-10 leading-none">Локация</h2>
+      <section className="w-full py-16 px-6">
+        <div className="bg-burgundy text-cream py-16 rounded-sm">
+          <div className="max-w-md mx-auto px-8">
+            <h2 className="script text-cream text-6xl text-center mb-10 leading-none">Локация</h2>
 
-          <div className="text-center mb-8">
-            <p className="serif italic text-3xl mb-1">11:40</p>
-            <p className="serif text-lg">ЗАГС города Новороссийска</p>
-            <p className="serif font-semibold text-lg">проспект Дзержинского, 197</p>
-          </div>
+            <div className="text-center mb-8">
+              <p className="serif italic text-3xl mb-1">11:40</p>
+              <p className="serif text-lg">ЗАГС города Новороссийска</p>
+              <p className="serif text-lg">проспект Дзержинского, 197</p>
+            </div>
 
-          <div className="relative mb-12">
-            <img src={signingImg} alt="Регистрация брака" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
-          </div>
+            <div className="relative mb-12">
+              <img src={signingImg} alt="Регистрация брака" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            </div>
 
-          <div className="text-center mb-8">
-            <p className="serif italic text-3xl mb-1">16:00</p>
-            <p className="serif font-semibold text-lg">Ресторан Chateau Pinot</p>
-          </div>
+            <div className="text-center mb-8">
+              <p className="serif italic text-3xl mb-1">16:00</p>
+              <p className="serif text-lg">Ресторан Chateau Pinot</p>
+            </div>
 
-          <div className="relative">
-            <img src={restaurantImg} alt="Ресторан" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            <div className="relative">
+              <img src={restaurantImg} alt="Ресторан" className="relative w-full aspect-[4/3] object-cover grayscale" loading="lazy" width={800} height={600}/>
+            </div>
           </div>
         </div>
       </section>
@@ -161,7 +166,7 @@ function Invitation() {
       {/* DRESS CODE */}
       <Section>
         <SectionTitle>Дресс-код</SectionTitle>
-        <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-3">
+        <p className="text-center serif text-lg leading-relaxed text-foreground font-bold mb-3">
           Для нас главное — ваше присутствие!
         </p>
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-8">
@@ -171,7 +176,7 @@ function Invitation() {
           {[fabric1, fabric2, fabric3, fabric4, fabric5].map((src, i) => (
             <div
               key={i}
-              className="w-16 h-16 rounded-full ring-2 ring-cream shadow-lg overflow-hidden -ml-3 first:ml-0"
+              className="w-16 h-16 rounded-full overflow-hidden -ml-3 first:ml-0"
               style={{ zIndex: i + 1 }}
             >
               <img src={src} alt="" aria-hidden className="w-full h-full object-cover" />
@@ -209,15 +214,15 @@ function Invitation() {
           ) : (
             <form
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-              className="serif text-foreground/90 space-y-7"
+              className="serif text-burgundy space-y-7"
             >
-              <div>
-                <label className="block sans text-xs text-burgundy mb-2">Имя Фамилия</label>
+              <div className="flex items-center gap-3">
+                <label className="sans text-xs text-burgundy whitespace-nowrap">Имя Фамилия</label>
                 <input
                   required
                   value={form.name}
                   onChange={(e) => setForm({...form, name: e.target.value})}
-                  className="w-full bg-transparent border-b border-burgundy/40 py-2 serif text-lg focus:outline-none focus:border-burgundy transition-colors"
+                  className="flex-1 bg-transparent border-b border-burgundy/40 py-2 serif text-lg text-burgundy focus:outline-none focus:border-burgundy transition-colors"
                 />
               </div>
 
@@ -264,8 +269,9 @@ function Invitation() {
           )}
 
           <div className="text-center mt-12">
-            <p className="script text-burgundy text-5xl inline-flex items-center gap-3">
-              Ждём Вас <Heart className="h-6 w-6"/>
+            <p className="script text-burgundy text-5xl inline-flex items-center justify-center gap-2 leading-none">
+              <span>Ждём Вас</span>
+              <img src={heart14Img} alt="" aria-hidden className="h-10 w-10 object-contain -mt-1 select-none" />
             </p>
           </div>
         </div>
@@ -285,7 +291,7 @@ function Question({
 }) {
   return (
     <fieldset>
-      <legend className="serif text-base text-foreground/90 mb-3">{label}</legend>
+      <legend className="serif text-base text-burgundy mb-3">{label}</legend>
       <div className="space-y-2">
         {options.map(opt => {
           const checked = value === opt;
@@ -300,7 +306,7 @@ function Question({
                 onChange={() => onChange(opt)}
                 className="sr-only"
               />
-              <span className="serif text-base">{opt}</span>
+              <span className="serif text-base text-burgundy">{opt}</span>
             </label>
           );
         })}

@@ -92,13 +92,12 @@ function Invitation() {
           <p className="display text-3xl md:text-4xl tracking-[0.15em] text-foreground font-light">
             ДМИТРИЙ <span className="script text-burgundy text-5xl align-middle">&amp;</span> ДАРЬЯ
           </p>
-          <p className="script text-burgundy text-4xl mt-4">14 / 08 / 2026</p>
+          <p className="script text-foreground text-5xl mt-4">14 / 08 / 2026</p>
         </div>
       </Section>
 
       {/* INVITATION + CALENDAR */}
       <Section className="relative">
-        <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-4 -left-4 w-40 md:w-52 z-10 select-none opacity-90" />
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           <span className="script text-burgundy text-5xl float-left leading-[0.8] mr-2 mt-1">Д</span>
           орогие родные и друзья!

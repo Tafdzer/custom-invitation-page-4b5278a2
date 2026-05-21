@@ -60,9 +60,12 @@ function Invitation() {
     <main className="min-h-screen w-full text-foreground">
       {/* HERO */}
       <Section className="!py-12">
-        <div className="text-center mb-6">
-          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-left whitespace-pre-wrap">
-            {"\u00A0 We are getting\n\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 married!"}
+        <div className="mb-6">
+          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-left pl-3">
+            We are getting
+          </h1>
+          <h1 className="script text-burgundy text-5xl md:text-6xl leading-tight text-right pr-3 mt-2">
+            married!
           </h1>
         </div>
         <div className="relative">

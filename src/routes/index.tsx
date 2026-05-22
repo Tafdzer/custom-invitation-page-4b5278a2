@@ -278,11 +278,16 @@ function Invitation() {
                 ]}
               />
 
+              {error && (
+                <p className="sans text-xs text-burgundy text-center">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-burgundy text-cream py-3 serif tracking-[0.2em] text-sm hover:bg-burgundy-deep transition-colors uppercase"
+                disabled={submitting}
+                className="w-full bg-burgundy text-cream py-3 serif tracking-[0.2em] text-sm hover:bg-burgundy-deep transition-colors uppercase disabled:opacity-60"
               >
-                Отправить
+                {submitting ? "Отправляем..." : "Отправить"}
               </button>
             </form>
           )}

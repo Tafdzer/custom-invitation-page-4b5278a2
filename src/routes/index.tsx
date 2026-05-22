@@ -118,7 +118,7 @@ function Invitation() {
         <h3 className="script text-burgundy text-6xl text-center mb-6">Август</h3>
 
         <div className="relative">
-          <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute -top-16 -right-6 w-28 md:w-32 z-10 select-none opacity-90" />
+          <img src={cupidImg} alt="" aria-hidden className="pointer-events-none absolute top-4 -left-10 w-28 md:w-32 z-10 select-none opacity-90" />
           <div className="grid grid-cols-7 gap-y-3 text-center sans text-xs text-burgundy mb-2">
             {["ПН","ВТ","СР","ЧТ","ПТ","СБ","ВС"].map(d => <div key={d}>{d}</div>)}
           </div>
@@ -192,7 +192,6 @@ function Invitation() {
 
       {/* WISHES */}
       <Section className="!pt-0 relative">
-        <img src={champagneImg} alt="" aria-hidden className="pointer-events-none absolute -top-6 -right-2 w-20 md:w-24 z-10 select-none opacity-90" />
         <SectionTitle>Пожелания</SectionTitle>
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           Мы не будем оригинальными, но будем практичными. Лучший для нас подарок —
@@ -207,7 +206,8 @@ function Invitation() {
 
       {/* RSVP */}
       <section className="w-full bg-burgundy/[0.04] py-16">
-        <div className="max-w-md mx-auto px-8">
+        <div className="max-w-md mx-auto px-8 relative">
+          <img src={champagneImg} alt="" aria-hidden className="pointer-events-none absolute top-[55%] -right-2 w-20 md:w-24 z-10 select-none opacity-90" />
           <SectionTitle>Анкета гостя</SectionTitle>
 
           {sent ? (

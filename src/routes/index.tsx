@@ -192,7 +192,6 @@ function Invitation() {
 
       {/* WISHES */}
       <Section className="!pt-0 relative">
-        <img src={champagneImg} alt="" aria-hidden className="pointer-events-none absolute -top-6 -right-2 w-20 md:w-24 z-10 select-none opacity-90" />
         <SectionTitle>Пожелания</SectionTitle>
         <p className="text-center serif text-lg leading-relaxed text-foreground/85 mb-4">
           Мы не будем оригинальными, но будем практичными. Лучший для нас подарок —

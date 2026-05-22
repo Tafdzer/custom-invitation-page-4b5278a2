@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
+import { submitRsvp } from "@/lib/rsvp.functions";
 import coupleImg from "@/assets/couple-hero.jpg";
 import signingImg from "@/assets/signing.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";

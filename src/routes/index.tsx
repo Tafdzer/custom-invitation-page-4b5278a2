@@ -53,6 +53,9 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 function Invitation() {
   const [form, setForm] = useState({ name: "", attend: "", food: "", drink: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const sendRsvp = useServerFn(submitRsvp);
 
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
   const leadBlanks = 4; // Aug 1 2026 is Saturday → 5 blanks before, but Sat is index 5 (Mon=0). Let's compute: Mon=0..Sun=6, Aug 1 2026 = Saturday = index 5

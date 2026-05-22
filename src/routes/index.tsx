@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
+import { submitRsvp } from "@/lib/rsvp.functions";
 import coupleImg from "@/assets/couple-hero.jpg";
 import signingImg from "@/assets/signing.jpg";
 import restaurantImg from "@/assets/restaurant.jpg";
@@ -51,6 +53,9 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 function Invitation() {
   const [form, setForm] = useState({ name: "", attend: "", food: "", drink: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const sendRsvp = useServerFn(submitRsvp);
 
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
   const leadBlanks = 4; // Aug 1 2026 is Saturday → 5 blanks before, but Sat is index 5 (Mon=0). Let's compute: Mon=0..Sun=6, Aug 1 2026 = Saturday = index 5
@@ -213,7 +218,21 @@ function Invitation() {
             </div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (submitting) return;
+                setSubmitting(true);
+                setError(null);
+                try {
+                  await sendRsvp({ data: form });
+                  setSent(true);
+                } catch (err) {
+                  console.error(err);
+                  setError("Не удалось отправить. Попробуйте ещё раз.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
               className="serif text-burgundy space-y-7"
             >
               <div className="flex items-center gap-3">
@@ -259,11 +278,16 @@ function Invitation() {
                 ]}
               />
 
+              {error && (
+                <p className="sans text-xs text-burgundy text-center">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-burgundy text-cream py-3 serif tracking-[0.2em] text-sm hover:bg-burgundy-deep transition-colors uppercase"
+                disabled={submitting}
+                className="w-full bg-burgundy text-cream py-3 serif tracking-[0.2em] text-sm hover:bg-burgundy-deep transition-colors uppercase disabled:opacity-60"
               >
-                Отправить
+                {submitting ? "Отправляем..." : "Отправить"}
               </button>
             </form>
           )}

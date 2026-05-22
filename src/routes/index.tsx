@@ -218,7 +218,21 @@ function Invitation() {
             </div>
           ) : (
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (submitting) return;
+                setSubmitting(true);
+                setError(null);
+                try {
+                  await sendRsvp({ data: form });
+                  setSent(true);
+                } catch (err) {
+                  console.error(err);
+                  setError("Не удалось отправить. Попробуйте ещё раз.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
               className="serif text-burgundy space-y-7"
             >
               <div className="flex items-center gap-3">

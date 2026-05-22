@@ -206,7 +206,8 @@ function Invitation() {
 
       {/* RSVP */}
       <section className="w-full bg-burgundy/[0.04] py-16">
-        <div className="max-w-md mx-auto px-8">
+        <div className="max-w-md mx-auto px-8 relative">
+          <img src={champagneImg} alt="" aria-hidden className="pointer-events-none absolute top-[58%] right-0 w-20 md:w-24 z-10 select-none opacity-90" />
           <SectionTitle>Анкета гостя</SectionTitle>
 
           {sent ? (
